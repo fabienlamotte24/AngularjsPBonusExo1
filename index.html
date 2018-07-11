@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" ng-app="testApp">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <title>Exercice1</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
-  <script src="assets/js/script.js"></script>
-
 </head>
-<body>
-  <form novalidate>
-    <label for="userEmail">E-mail:</label><input type="email" name="emailAddress" ng-model="email" required />
+<body ng-app>
+  <form name="myForm">
+    <label for="email">E-mail:</label><input type="email" name="email" ng-model="email" required />
+    <div class="red" name="email" ng-show="myForm.email.$error.email" style="color: red;">Ce n'est pas bon</div>
+    <div class="green" name="email" ng-show="myForm.email.$valid" style="color: green; width:50px;">C'est bon</div>
   </form>
 </body>
 </html>

@@ -1,1 +1,7 @@
-input.ng-invalid {     background-color:red; } input.ng-valid {     background-color:green; }
+.red:input.ng-invalid {color:red;} .green:input.ng-valid {color:green;}
+.red{
+  color:red;
+}
+.green{
+  color:green;
+}
